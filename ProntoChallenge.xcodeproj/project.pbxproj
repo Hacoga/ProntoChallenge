@@ -7,21 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36E21D301FE82F530AAB3679 /* Pods_ProntoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9436A587BBA85777284BFE7E /* Pods_ProntoChallenge.framework */; };
 		8C666B82233E5EC4002D87B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666B81233E5EC4002D87B6 /* AppDelegate.swift */; };
-		8C666B84233E5EC4002D87B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666B83233E5EC4002D87B6 /* ViewController.swift */; };
-		8C666B87233E5EC4002D87B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C666B85233E5EC4002D87B6 /* Main.storyboard */; };
 		8C666B89233E5EC5002D87B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C666B88233E5EC5002D87B6 /* Assets.xcassets */; };
 		8C666B8C233E5EC5002D87B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C666B8A233E5EC5002D87B6 /* LaunchScreen.storyboard */; };
+		8C666B97233E5F95002D87B6 /* HomeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666B96233E5F95002D87B6 /* HomeMapViewController.swift */; };
+		8C666B9B233E6380002D87B6 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666B9A233E6380002D87B6 /* HomeTabBarViewController.swift */; };
+		8C666B9E233E640A002D87B6 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666B9D233E640A002D87B6 /* RestaurantsViewController.swift */; };
+		8C666BA1233E66E0002D87B6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C666BA0233E66E0002D87B6 /* Colors.xcassets */; };
+		8C666BA4233E679F002D87B6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BA3233E679F002D87B6 /* UIColorExtension.swift */; };
+		8C666BA6233E67C3002D87B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BA5233E67C3002D87B6 /* Constants.swift */; };
+		8C666BA8233E693F002D87B6 /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BA7233E693F002D87B6 /* GoogleDataProvider.swift */; };
+		8C666BAA233E698D002D87B6 /* GooglePlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BA9233E698D002D87B6 /* GooglePlaceModel.swift */; };
+		8C666BAC233E69B7002D87B6 /* PlaceMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BAB233E69B7002D87B6 /* PlaceMarkModel.swift */; };
+		8C666BAE233E7C3F002D87B6 /* MarkerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BAD233E7C3F002D87B6 /* MarkerInfoView.swift */; };
+		8C666BB1233E8069002D87B6 /* PlaceNearbyLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BB0233E8069002D87B6 /* PlaceNearbyLocationModel.swift */; };
+		8C666BB3233E9EA5002D87B6 /* NearbyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BB2233E9EA5002D87B6 /* NearbyViewCell.swift */; };
+		8C666BB5233E9F44002D87B6 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BB4233E9F44002D87B6 /* UITableViewExtension.swift */; };
+		8C666BB7233EA1E7002D87B6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BB6233EA1E7002D87B6 /* UIViewExtension.swift */; };
+		8C666BB9233EAC5C002D87B6 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C666BB8233EAC5C002D87B6 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440384E3FBE4328CF293DF19 /* Pods-ProntoChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProntoChallenge.debug.xcconfig"; path = "Target Support Files/Pods-ProntoChallenge/Pods-ProntoChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		8C666B7E233E5EC4002D87B6 /* ProntoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProntoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C666B81233E5EC4002D87B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C666B83233E5EC4002D87B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C666B86233E5EC4002D87B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C666B88233E5EC5002D87B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C666B8B233E5EC5002D87B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C666B8D233E5EC5002D87B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C666B96233E5F95002D87B6 /* HomeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapViewController.swift; sourceTree = "<group>"; };
+		8C666B9A233E6380002D87B6 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		8C666B9D233E640A002D87B6 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		8C666BA0233E66E0002D87B6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8C666BA3233E679F002D87B6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		8C666BA5233E67C3002D87B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8C666BA7233E693F002D87B6 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		8C666BA9233E698D002D87B6 /* GooglePlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceModel.swift; sourceTree = "<group>"; };
+		8C666BAB233E69B7002D87B6 /* PlaceMarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkModel.swift; sourceTree = "<group>"; };
+		8C666BAD233E7C3F002D87B6 /* MarkerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerInfoView.swift; sourceTree = "<group>"; };
+		8C666BB0233E8069002D87B6 /* PlaceNearbyLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceNearbyLocationModel.swift; sourceTree = "<group>"; };
+		8C666BB2233E9EA5002D87B6 /* NearbyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewCell.swift; sourceTree = "<group>"; };
+		8C666BB4233E9F44002D87B6 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		8C666BB6233EA1E7002D87B6 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		8C666BB8233EAC5C002D87B6 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		9436A587BBA85777284BFE7E /* Pods_ProntoChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProntoChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6C41BC60AA8588E0BE38AF6 /* Pods-ProntoChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProntoChallenge.release.xcconfig"; path = "Target Support Files/Pods-ProntoChallenge/Pods-ProntoChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36E21D301FE82F530AAB3679 /* Pods_ProntoChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +71,8 @@
 			children = (
 				8C666B80233E5EC4002D87B6 /* ProntoChallenge */,
 				8C666B7F233E5EC4002D87B6 /* Products */,
+				C753737A6AC0CA47B336D66A /* Pods */,
+				9311F92B4325396594FC31D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +88,115 @@
 			isa = PBXGroup;
 			children = (
 				8C666B81233E5EC4002D87B6 /* AppDelegate.swift */,
-				8C666B83233E5EC4002D87B6 /* ViewController.swift */,
-				8C666B85233E5EC4002D87B6 /* Main.storyboard */,
-				8C666B88233E5EC5002D87B6 /* Assets.xcassets */,
+				8C666B93233E5F66002D87B6 /* Modules */,
+				8C666B95233E5F7B002D87B6 /* Models */,
+				8C666B94233E5F73002D87B6 /* Views */,
+				8C666BA2233E678D002D87B6 /* Utils */,
+				8C666B9F233E66CA002D87B6 /* Assets */,
 				8C666B8A233E5EC5002D87B6 /* LaunchScreen.storyboard */,
 				8C666B8D233E5EC5002D87B6 /* Info.plist */,
 			);
 			path = ProntoChallenge;
+			sourceTree = "<group>";
+		};
+		8C666B93233E5F66002D87B6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8C666B9C233E63F6002D87B6 /* Restaurants */,
+				8C666B99233E631C002D87B6 /* TabBarContainer */,
+				8C666B98233E6313002D87B6 /* MapView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8C666B94233E5F73002D87B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C666BAD233E7C3F002D87B6 /* MarkerInfoView.swift */,
+				8C666BB2233E9EA5002D87B6 /* NearbyViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C666B95233E5F7B002D87B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C666BAF233E8022002D87B6 /* Map */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C666B98233E6313002D87B6 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				8C666B96233E5F95002D87B6 /* HomeMapViewController.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		8C666B99233E631C002D87B6 /* TabBarContainer */ = {
+			isa = PBXGroup;
+			children = (
+				8C666B9A233E6380002D87B6 /* HomeTabBarViewController.swift */,
+			);
+			path = TabBarContainer;
+			sourceTree = "<group>";
+		};
+		8C666B9C233E63F6002D87B6 /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				8C666B9D233E640A002D87B6 /* RestaurantsViewController.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		8C666B9F233E66CA002D87B6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8C666B88233E5EC5002D87B6 /* Assets.xcassets */,
+				8C666BA0233E66E0002D87B6 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8C666BA2233E678D002D87B6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8C666BA3233E679F002D87B6 /* UIColorExtension.swift */,
+				8C666BA5233E67C3002D87B6 /* Constants.swift */,
+				8C666BB4233E9F44002D87B6 /* UITableViewExtension.swift */,
+				8C666BB6233EA1E7002D87B6 /* UIViewExtension.swift */,
+				8C666BB8233EAC5C002D87B6 /* UIImageViewExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8C666BAF233E8022002D87B6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8C666BA7233E693F002D87B6 /* GoogleDataProvider.swift */,
+				8C666BAB233E69B7002D87B6 /* PlaceMarkModel.swift */,
+				8C666BA9233E698D002D87B6 /* GooglePlaceModel.swift */,
+				8C666BB0233E8069002D87B6 /* PlaceNearbyLocationModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		9311F92B4325396594FC31D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9436A587BBA85777284BFE7E /* Pods_ProntoChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C753737A6AC0CA47B336D66A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				440384E3FBE4328CF293DF19 /* Pods-ProntoChallenge.debug.xcconfig */,
+				C6C41BC60AA8588E0BE38AF6 /* Pods-ProntoChallenge.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C666B90233E5EC5002D87B6 /* Build configuration list for PBXNativeTarget "ProntoChallenge" */;
 			buildPhases = (
+				3393949BB4229C9B9D87BF61 /* [CP] Check Pods Manifest.lock */,
 				8C666B7A233E5EC4002D87B6 /* Sources */,
 				8C666B7B233E5EC4002D87B6 /* Frameworks */,
 				8C666B7C233E5EC4002D87B6 /* Resources */,
+				625B11BD97CD13E3CFFAC504 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,35 +259,87 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C666BA1233E66E0002D87B6 /* Colors.xcassets in Resources */,
 				8C666B8C233E5EC5002D87B6 /* LaunchScreen.storyboard in Resources */,
 				8C666B89233E5EC5002D87B6 /* Assets.xcassets in Resources */,
-				8C666B87233E5EC4002D87B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3393949BB4229C9B9D87BF61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProntoChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		625B11BD97CD13E3CFFAC504 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProntoChallenge/Pods-ProntoChallenge-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProntoChallenge/Pods-ProntoChallenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C666B7A233E5EC4002D87B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C666B84233E5EC4002D87B6 /* ViewController.swift in Sources */,
+				8C666BAE233E7C3F002D87B6 /* MarkerInfoView.swift in Sources */,
+				8C666B9B233E6380002D87B6 /* HomeTabBarViewController.swift in Sources */,
+				8C666BA8233E693F002D87B6 /* GoogleDataProvider.swift in Sources */,
+				8C666B9E233E640A002D87B6 /* RestaurantsViewController.swift in Sources */,
+				8C666BB7233EA1E7002D87B6 /* UIViewExtension.swift in Sources */,
+				8C666BB9233EAC5C002D87B6 /* UIImageViewExtension.swift in Sources */,
+				8C666BA4233E679F002D87B6 /* UIColorExtension.swift in Sources */,
+				8C666BB1233E8069002D87B6 /* PlaceNearbyLocationModel.swift in Sources */,
+				8C666BB5233E9F44002D87B6 /* UITableViewExtension.swift in Sources */,
+				8C666BAA233E698D002D87B6 /* GooglePlaceModel.swift in Sources */,
+				8C666B97233E5F95002D87B6 /* HomeMapViewController.swift in Sources */,
+				8C666BAC233E69B7002D87B6 /* PlaceMarkModel.swift in Sources */,
 				8C666B82233E5EC4002D87B6 /* AppDelegate.swift in Sources */,
+				8C666BA6233E67C3002D87B6 /* Constants.swift in Sources */,
+				8C666BB3233E9EA5002D87B6 /* NearbyViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8C666B85233E5EC4002D87B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C666B86233E5EC4002D87B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8C666B8A233E5EC5002D87B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,6 +469,7 @@
 		};
 		8C666B91233E5EC5002D87B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 440384E3FBE4328CF293DF19 /* Pods-ProntoChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +488,7 @@
 		};
 		8C666B92233E5EC5002D87B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6C41BC60AA8588E0BE38AF6 /* Pods-ProntoChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
