@@ -52,7 +52,6 @@ class GoogleDataProvider {
                     completion(placesArray)
                 }
             }
-            
             do {
                 if let data = data {
                     let decodedModel = try jsonDecoder.decode(PlaceNearbyLocationModel.self, from: data)
@@ -69,12 +68,10 @@ class GoogleDataProvider {
             } catch {
                 print("error \(error.localizedDescription)")
                 return
-                //completion(decodeError)
             }
         }
         placesTask?.resume()
     }
-    
     
     func fetchPhotoFromReference(_ reference: String, completion: @escaping PhotoCompletion) -> Void {
         if let photo = photoCache[reference] {
@@ -85,11 +82,9 @@ class GoogleDataProvider {
                 completion(nil)
                 return
             }
-            
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = true
             }
-            
             session.downloadTask(with: url) { url, response, error in
                 var downloadedPhoto: UIImage? = nil
                 defer {
