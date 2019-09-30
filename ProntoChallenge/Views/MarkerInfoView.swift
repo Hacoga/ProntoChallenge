@@ -23,12 +23,14 @@ final class MarkerInfoView: UIView {
     }()
     var placePhoto: UIImageView = {
         let placePhoto = UIImageView()
+        placePhoto.layer.masksToBounds = true
+        placePhoto.layer.cornerRadius = 10
         return placePhoto
     }()
     var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Avenir-Heavy ", size: 14.0)
+        label.font = UIFont(name: "Avenir-Heavy", size: 14.0)
         label.textColor = .black
         label.numberOfLines = 0
         return label
@@ -65,10 +67,10 @@ final class MarkerInfoView: UIView {
     private func setupNameLabel() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
+            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 5),
             nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 5),
             nameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -5),
-            nameLabel.heightAnchor.constraint(equalToConstant: 45)])
+            nameLabel.heightAnchor.constraint(equalToConstant: 35)])
     }
     
     private func setupPlacePhoto() {

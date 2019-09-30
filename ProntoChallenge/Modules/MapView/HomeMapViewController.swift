@@ -14,7 +14,7 @@ var userCoordinate: CLLocationCoordinate2D?
 
 final class HomeMapViewController: UIViewController {
     /// Types filtes for search
-    private var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
+    private var searchedTypes = ["restaurant", "bar", "cafe", "bakery", "grocery_or_supermarket"]
     /// Configure UIView container Location..
     private var googleMapView: GMSMapView = {
         let googleMapView = GMSMapView()
@@ -34,10 +34,10 @@ final class HomeMapViewController: UIViewController {
     private let placeTitleLabel: UILabel = {
         let placeTitleLabel = UILabel()
         placeTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        placeTitleLabel.font = UIFont(name: "Avenir-Black", size: 19.0)
+        placeTitleLabel.font = UIFont(name: "Avenir-Black", size: 17.0)
         placeTitleLabel.textColor = .black
         placeTitleLabel.numberOfLines = 2
-        placeTitleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        placeTitleLabel.lineBreakMode = NSLineBreakMode.byClipping
         return placeTitleLabel
     }()
     
@@ -54,6 +54,7 @@ final class HomeMapViewController: UIViewController {
     private var isSearching = false
     private var googlePlacesFilter = [GooglePlace]()
     private var googlePlacesFetched = [GooglePlace]()
+    private var isSelectedPin = false
     
     override func viewDidLoad() {
         setupDesignViews()
@@ -98,21 +99,25 @@ final class HomeMapViewController: UIViewController {
             googleMapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
     }
     
-    private func setupContainerCategoryView() {
+    private func setupContainerCategoryView(topView: CGFloat = 15,
+                                            leadingView: CGFloat = 15,
+                                            trailingView: CGFloat = -15,
+                                            heightView: CGFloat = 120,
+                                            widthView: CGFloat = 220) {
         containerCategoryView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            containerCategoryView.topAnchor.constraint(equalTo: view.topAnchor, constant: 15),
-            containerCategoryView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-            containerCategoryView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-            containerCategoryView.heightAnchor.constraint(equalToConstant: 150),
-            containerCategoryView.widthAnchor.constraint(equalToConstant: 300)])
+            containerCategoryView.topAnchor.constraint(equalTo: view.topAnchor, constant: topView),
+            containerCategoryView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingView),
+            containerCategoryView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: trailingView),
+            containerCategoryView.heightAnchor.constraint(equalToConstant: heightView),
+            containerCategoryView.widthAnchor.constraint(equalToConstant: widthView)])
     }
     
     /// <#Description#>
     private func setupPlaceLabel() {
         placeTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            placeTitleLabel.topAnchor.constraint(equalTo: containerCategoryView.topAnchor, constant: 30),
+            placeTitleLabel.topAnchor.constraint(equalTo: containerCategoryView.topAnchor, constant: 10),
             placeTitleLabel.leadingAnchor.constraint(equalTo: containerCategoryView.leadingAnchor, constant: 15),
             placeTitleLabel.trailingAnchor.constraint(equalTo: containerCategoryView.trailingAnchor, constant: -50)])
     }
@@ -120,9 +125,9 @@ final class HomeMapViewController: UIViewController {
     private func setupConstraintsSearchBar() {
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            searchBar.topAnchor.constraint(equalTo: placeTitleLabel.bottomAnchor, constant: 5),
+            searchBar.topAnchor.constraint(equalTo: placeTitleLabel.bottomAnchor, constant: 2),
             searchBar.leadingAnchor.constraint(equalTo: containerCategoryView.leadingAnchor, constant: 15),
-            searchBar.trailingAnchor.constraint(equalTo: containerCategoryView.trailingAnchor, constant: -15)])
+            searchBar.trailingAnchor.constraint(equalTo: containerCategoryView.trailingAnchor, constant: -5)])
     }
     
     private func setupIconPinUserLocation() {
@@ -155,6 +160,10 @@ final class HomeMapViewController: UIViewController {
                                                       left: 0,
                                                       bottom: labelHeight,
                                                       right: 0)
+            if !self.isSelectedPin {
+                userCoordinate = coordinate
+                self.fetchNearbyPlaces(coordinate: coordinate)
+            }
         }
     }
     
@@ -205,6 +214,7 @@ extension HomeMapViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
         if (gesture) {
+            isSelectedPin = false
             googleMapView.selectedMarker = nil
         }
     }
@@ -213,7 +223,7 @@ extension HomeMapViewController: GMSMapViewDelegate {
         guard let placeMarker = marker as? PlaceMarker else {
             return nil
         }
-        let infoView = MarkerInfoView(frame: CGRect(x: 0, y: 0, width: 200, height: 160))
+        let infoView = MarkerInfoView(frame: CGRect(x: 0, y: 0, width: 160, height: 120))
         infoView.nameTextPin = placeMarker.place.name
         if let photo = placeMarker.place.photo {
             infoView.placePhoto.image = photo
@@ -224,10 +234,12 @@ extension HomeMapViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        isSelectedPin = true
         return false
     }
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        isSelectedPin = false
         googleMapView.selectedMarker = nil
         return false
     }
