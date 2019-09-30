@@ -37,7 +37,7 @@ final class HomeMapViewController: UIViewController {
         placeTitleLabel.font = UIFont(name: "Avenir-Black", size: 17.0)
         placeTitleLabel.textColor = .black
         placeTitleLabel.numberOfLines = 2
-        placeTitleLabel.lineBreakMode = NSLineBreakMode.byClipping
+        placeTitleLabel.lineBreakMode = NSLineBreakMode.byTruncatingTail
         return placeTitleLabel
     }()
     
@@ -54,7 +54,11 @@ final class HomeMapViewController: UIViewController {
     private var isSearching = false
     private var googlePlacesFilter = [GooglePlace]()
     private var googlePlacesFetched = [GooglePlace]()
-    private var isSelectedPin = false
+    private var isSelectedPin = false {
+        didSet {
+            pinUserLocation.isHidden = isSelectedPin
+        }
+    }
     
     override func viewDidLoad() {
         setupDesignViews()
@@ -175,6 +179,9 @@ final class HomeMapViewController: UIViewController {
                                                 [weak self]
                                                 places in
                                                 guard let self = self else { return }
+                                                if places.isEmpty {
+                                                    self.showAlertLimitApis()
+                                                }
                                                 self.googlePlacesFetched = places
                                                 self.googlePlacesFilter = places
                                                 places.forEach {
@@ -182,6 +189,16 @@ final class HomeMapViewController: UIViewController {
                                                     marker.map = self.googleMapView
                                                 }
         }
+    }
+    
+    private func showAlertLimitApis() {
+        let alert = UIAlertController(title: "Alert",
+                                      message: "You have exceeded your daily request quota for Google API, try later please.",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
     }
 }
 
@@ -223,7 +240,7 @@ extension HomeMapViewController: GMSMapViewDelegate {
         guard let placeMarker = marker as? PlaceMarker else {
             return nil
         }
-        let infoView = MarkerInfoView(frame: CGRect(x: 0, y: 0, width: 160, height: 120))
+        let infoView = MarkerInfoView(frame: CGRect(x: 0, y: 0, width: 160, height: 100))
         infoView.nameTextPin = placeMarker.place.name
         if let photo = placeMarker.place.photo {
             infoView.placePhoto.image = photo
