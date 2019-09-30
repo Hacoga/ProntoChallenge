@@ -88,15 +88,35 @@ final class RestaurantsViewController: UIViewController {
                                                 [weak self]
                                                 places in
                                                 guard let self = self else { return }
+                                                if places.isEmpty {
+                                                    self.showAlertLimitApi()
+                                                }
                                                 self.cells = places.map({ (place) -> NearbyLocationModel in
-                                                    let geo = Geometry(location: Location(lat: place.coordinate.latitude, lng: place.coordinate.longitude))
-                                                    let placeModel = NearbyLocationModel(geometry: geo, name: place.name, reference: place.photoReference ?? "", scope: "", types: [""], vicinity: place.placeType, photos: nil)
+                                                    let geo = Geometry(location: Location(lat: place.coordinate.latitude,
+                                                                                          lng: place.coordinate.longitude))
+                                                    let placeModel = NearbyLocationModel(geometry: geo,
+                                                                                         name: place.name,
+                                                                                         reference: place.photoReference ?? "",
+                                                                                         scope: "",
+                                                                                         types: [""],
+                                                                                         vicinity: place.placeType,
+                                                                                         photos: nil)
                                                     return placeModel
                                                 })
                                                 if !self.cells.isEmpty {
                                                     self.tableView.reloadData()
                                                 }
         }
+    }
+    
+    private func showAlertLimitApi() {
+        let alert = UIAlertController(title: "Alert",
+                                      message: "If you have exceeded your daily request quota for Google API, try later please.",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
     }
 }
 

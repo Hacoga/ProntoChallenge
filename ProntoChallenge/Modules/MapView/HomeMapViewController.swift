@@ -180,7 +180,7 @@ final class HomeMapViewController: UIViewController {
                                                 places in
                                                 guard let self = self else { return }
                                                 if places.isEmpty {
-                                                    self.showAlertLimitApis()
+                                                    self.showAlertLimitApi()
                                                 }
                                                 self.googlePlacesFetched = places
                                                 self.googlePlacesFilter = places
@@ -191,9 +191,9 @@ final class HomeMapViewController: UIViewController {
         }
     }
     
-    private func showAlertLimitApis() {
+    private func showAlertLimitApi() {
         let alert = UIAlertController(title: "Alert",
-                                      message: "You have exceeded your daily request quota for Google API, try later please.",
+                                      message: "If you have exceeded your daily request quota for Google API, try later please.",
                                       preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
