@@ -179,9 +179,6 @@ final class HomeMapViewController: UIViewController {
                                                 [weak self]
                                                 places in
                                                 guard let self = self else { return }
-                                                if places.isEmpty {
-                                                    self.showAlertLimitApi()
-                                                }
                                                 self.googlePlacesFetched = places
                                                 self.googlePlacesFilter = places
                                                 places.forEach {
